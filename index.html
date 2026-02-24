@@ -70,12 +70,12 @@ const MUSCLES=["Alla","Brost","Rygg","Axlar","Ben","Biceps","Triceps","Mage"];
 // Exercise images — filename map. In production: hosted CDN URLs
 // In sandbox: external images blocked, falls back to gradient+emoji
 const EX_IMG = {
-  "Hip Thrust":"/img/female_barbell_hip_thrusts.png",
-  "Knaboej":"/img/female_barbell_squats.png",
-  "Benpress":"/img/female_barbell_leg_press.png",
-  "Latsdrag":"/img/female_wide_grip_lat_pulldowns_back.png",
-  "Maskin Brostpress":"/img/female_machine_chest_press.png",
-  "Sidolyft":"/img/female_dumbbell_side_raises.png",
+  "Hip Thrust":"./img/female_barbell_hip_thrusts.png",
+  "Knaboej":"./img/female_barbell_squats.png",
+  "Benpress":"./img/female_barbell_leg_press.png",
+  "Latsdrag":"./img/female_wide_grip_lat_pulldowns_back.png",
+  "Maskin Brostpress":"./img/female_machine_chest_press.png",
+  "Sidolyft":"./img/female_dumbbell_side_raises.png",
 };
 // Crop positions per exercise for consistent thumbnails
 const EX_CROP = {
@@ -89,18 +89,18 @@ const EX_CROP = {
 
 // Exercise metadata: descriptions + tips for popup. Images added later per gender.
 const EX_DATA = {
-  "Hip Thrust":{desc:"Rygg mot bänk, stång över höften. Pressa höften uppåt tills kroppen bildar en rak linje från axlar till knän.",tip:"Kläm ihop rumpan hårt i toppen — håll 1 sek. Hakan mot bröstet. Driv genom hälarna.",img:"/img/female_barbell_hip_thrusts.png",crop:"center 60%"},
-  "Knaboej":{desc:"Stång på övre ryggen, fötter axelbrett. Sänk höften tills låren är parallella med golvet.",tip:"Knäna följer tårnas riktning. Bröst upp, blick framåt. Driv upp genom hälarna.",img:"/img/female_barbell_squats.png",crop:"center 30%"},
-  "Utfall":{desc:"Stå upprätt med hantlar i händerna. Ta ett långt steg framåt och sänk bakre knät mot golvet.",tip:"Framknä bakom tårna. Driv upp med främre hälen. Håll överkroppen rak.",img:"/img/female_lunges.png",crop:"center 20%"},
+  "Hip Thrust":{desc:"Rygg mot bänk, stång över höften. Pressa höften uppåt tills kroppen bildar en rak linje från axlar till knän.",tip:"Kläm ihop rumpan hårt i toppen — håll 1 sek. Hakan mot bröstet. Driv genom hälarna.",img:"./img/female_barbell_hip_thrusts.png",crop:"center 60%"},
+  "Knaboej":{desc:"Stång på övre ryggen, fötter axelbrett. Sänk höften tills låren är parallella med golvet.",tip:"Knäna följer tårnas riktning. Bröst upp, blick framåt. Driv upp genom hälarna.",img:"./img/female_barbell_squats.png",crop:"center 30%"},
+  "Utfall":{desc:"Stå upprätt med hantlar i händerna. Ta ett långt steg framåt och sänk bakre knät mot golvet.",tip:"Framknä bakom tårna. Driv upp med främre hälen. Håll överkroppen rak.",img:"./img/female_lunges.png",crop:"center 20%"},
   "Benpress":{desc:"Fötter axelbrett i maskinen. Pressa upp vikten tills benen är nästan raka.",tip:"Lås inte knäna i toppen. Sänk kontrollerat tills 90° i knäna."},
   "Bencurl":{desc:"Sittande i maskin, curl benen bakåt mot rumpan.",tip:"Kontrollerad rörelse hela vägen. Kläm hamstrings i botten."},
   "Benextension":{desc:"Sittande, sträck ut benen i maskinen tills raka.",tip:"Pausa 1 sek i toppen. Sänk långsamt tillbaka."},
   "Vadpress":{desc:"Tåspetsar på benpressen, pressa med vaderna.",tip:"Full rörelseomfång — hela vägen ner och upp."},
   "Rumansk marklyft":{desc:"Stående, fäll framåt i höften med stång till smalben.",tip:"Rak rygg hela tiden. Känn stretch i hamstrings. Mjuka knän."},
-  "Latsdrag":{desc:"Sittande vid latsdragmaskin. Grip stången brett och drag ner mot övre bröstet.",tip:"Drag med armbågarna, inte händerna. Lätt bakåtlut. Kläm skulderbladen.",img:"/img/female_wide_grip_lat_pulldowns_back.png",crop:"center 20%"},
-  "Maskin Brostpress":{desc:"Sitt i maskinen med rygg mot stödet. Pressa handtagen framåt.",tip:"Håll axlarna nere och ihoppressade. Andas ut vid press.",img:"/img/female_machine_chest_press.png",crop:"center 30%"},
+  "Latsdrag":{desc:"Sittande vid latsdragmaskin. Grip stången brett och drag ner mot övre bröstet.",tip:"Drag med armbågarna, inte händerna. Lätt bakåtlut. Kläm skulderbladen.",img:"./img/female_wide_grip_lat_pulldowns_back.png",crop:"center 20%"},
+  "Maskin Brostpress":{desc:"Sitt i maskinen med rygg mot stödet. Pressa handtagen framåt.",tip:"Håll axlarna nere och ihoppressade. Andas ut vid press.",img:"./img/female_machine_chest_press.png",crop:"center 30%"},
   "Sittande kabelrodd":{desc:"Sitt med rakt grepp, drag handtaget mot magen.",tip:"Håll ryggen rak. Press ihop skulderbladen i slutet."},
-  "Sidolyft":{desc:"Stående med hantlar vid sidorna. Lyft åt sidorna till axelhöjd.",tip:"Tänk: häll ut vattnet ur glasen. Lätt vikt, kontrollerad rörelse.",img:"/img/female_dumbbell_side_raises.png",crop:"center 25%"},
+  "Sidolyft":{desc:"Stående med hantlar vid sidorna. Lyft åt sidorna till axelhöjd.",tip:"Tänk: häll ut vattnet ur glasen. Lätt vikt, kontrollerad rörelse.",img:"./img/female_dumbbell_side_raises.png",crop:"center 25%"},
   "Tricep Pushdown":{desc:"Stående vid kabel, pressa handtaget nedåt.",tip:"Armbågar tätt mot kroppen. Sträck ut helt i botten."},
   "Kabelcurl":{desc:"Stående vid kabel, curl repet uppåt.",tip:"Konstant motstånd hela vägen. Kläm i toppen."},
   "Cable Fly":{desc:"Stå mellan kablar, för händerna samman framför bröstet.",tip:"Lätt böj i armbågarna. Känn stretch i bröstet."},
